@@ -20,7 +20,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -2
   maxTextureSize: 1024
   textureSettings:
     filterMode: 0
@@ -44,105 +44,6 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites:
-    - name: Explosion_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_1
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 160
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_2
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 160
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_3
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 160
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_4
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 160
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 80
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_6
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 80
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_7
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 80
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_8
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 80
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_9
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 80
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: Explosion_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
+    sprites: []
   spritePackingTag: 
   userData: 

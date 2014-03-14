@@ -29,15 +29,8 @@ ShootingGameフォルダの中の**Learnプロジェクト**を開こう。
 ## スプライトの設定 (Sprite Editorを使う)
 
 1. Spaceship 1のTexture Import SettingsのSprite ModeをMultipleに変更します。
-	* 今回は私の方で設定を指定たので、Applyを押すと既に複数のスプライトに切り分けられます。
-	* 切り分けられていますが、何をやっているか確認してみましょう。
-		* Texture Import Settingsの「SpriteEditor」ボタンを押してSpriteEditorを開いてみましょう。
-			* SpriteEditorの 左上のスライスボタンをクリックしてください。ここで切り分けの設定を行います。
-			* 今回は均一に切り分ける「グリッド」タイプを使用します。
-			* ピクセルサイズは48x48です。
-			* スライスボタンを押してアプライしましょう。
 			
-<!--2. Texture Import Settingsの「SpriteEditor」ボタンを押してSpriteEditorを開いてみましょう。
+2. Texture Import Settingsの「SpriteEditor」ボタンを押してSpriteEditorを開いてみましょう。
 3. スプライトを複数のスプライトにわけます。
 	* 左上のスライスをクリックしてください
 	* 以下の設定でスライスします。
@@ -47,25 +40,25 @@ ShootingGameフォルダの中の**Learnプロジェクト**を開こう。
 		Type|Grid
 		Pixel Size| X 48 Y 48
 		
-	* Sliceボタンを押してテクスチャに枠線が付いたことを確認しApplyボタンを押して反映します。-->
+	* Sliceボタンを押してテクスチャに枠線が付いたことを確認しApplyボタンを押して反映します。
 	
 4. 同じように`Bullet_16x16`も設定します。
-<!--	* Sprite ModeをMultipleにしてSprite Editorを開きましょう。
+	* Sprite ModeをMultipleにしてSprite Editorを開きましょう。
 	* 以下の設定でスプライトをわけます。
 
 		name | value
 		:---|:---
 		Type|Grid
-		Pixel Size| X 16 Y 16-->
+		Pixel Size| X 16 Y 16
 		
 5. `Explosion`も設定します。
-<!--	* Sprite ModeをMultipleにしてSprite Editorを開きましょう。
+	* Sprite ModeをMultipleにしてSprite Editorを開きましょう。
 	* 以下の設定でスプライトをわけます。
 
 		name | value
 		:---|:---
 		Type|Grid
-		Pixel Size| X 64 Y 64-->
+		Pixel Size| X 64 Y 64
 		
 		
 ## スプライトアニメーション
