@@ -34,8 +34,8 @@ AnimationClip:
       m_Curve:
       - time: .0833333358
         value: 0
-        inSlope: 4.79999971
-        outSlope: 4.79999971
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -114,8 +114,8 @@ AnimationClip:
       m_Curve:
       - time: .0833333358
         value: 0
-        inSlope: 4.79999971
-        outSlope: 4.79999971
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2

@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
+  - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 58: {fileID: 5800000}
-  - 114: {fileID: 11400002}
   m_Layer: 11
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.12731695, y: 1.21583569, z: 0}
+  m_LocalPosition: {x: 2.94996858, y: .614218712, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,9 +54,9 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: .0799999982
+  m_Radius: .0700000003
   m_Center: {x: 0, y: 0}
---- !u!114 &11400002
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -64,11 +64,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 746a16dd8c833468b86af388c5ad1f80, type: 3}
+  m_Script: {fileID: 11500000, guid: ca46e3997c3764d38bce3807f7b1c4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  isPositive: 0
+  lifeTime: 5
+  power: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

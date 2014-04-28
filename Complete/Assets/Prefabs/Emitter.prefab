@@ -35,11 +35,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f98a3d591a7c446ead2e8e4d1518296, type: 3}
+  m_Script: {fileID: 11500000, guid: 684e9ba532d8c44c896431b20a7ecf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 100140, guid: f04aea6f1a85647b8b4f8abf5dc11ff4, type: 2}
+  - {fileID: 100016, guid: 6da037c07944b43388367c21051f338a, type: 2}
+  - {fileID: 100016, guid: 97a2ac8bc9ff84a7a97e3b24eaf5b048, type: 2}
+  - {fileID: 100016, guid: e5f09567eb32c4d8e958d308b2908547, type: 2}
+  - {fileID: 100016, guid: 4b637cc8ae5ec44e2b53a4c35da648d8, type: 2}
+  - {fileID: 100016, guid: 726b79a1b7373455eb79665a394eeebb, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

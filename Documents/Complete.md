@@ -109,11 +109,11 @@ ShootingGameフォルダの中の**Completeプロジェクト**を開こう。
 	:--- |:---
 	Backgrounds|背景|  **( 0, 0, 0 )**
 	BGM|BGM|  **( 0, 0, 0 )**
-	DestroyArea (Bullet)|弾が削除される範囲|  **( 0, 0, 0 )**
-	DestroyArea (Enemy)|敵が削除される範囲|  **( 0, 0, 0 )**
+	DestroyArea|敵と弾が削除される範囲|  **( 0, 0, 0 )**
 	Emitter|敵を放出する| <span style='color:red'> **( 0, 3.5, 0 )** </span>
 	Manager|ゲームスタートの管理|  **( 0, 0, 0 )**
 	Title|タイトル|  **( 0, 0, 0 )**
+	Score GUI|スコア|  **( 0, 0, 0 )**
 
 2. ヒエラルキービューから**Manager**ゲームオブジェクトを選択しインスペクターを表示します。そして**Title**にTitleゲームオブジェクトを格納しましょう。
 
