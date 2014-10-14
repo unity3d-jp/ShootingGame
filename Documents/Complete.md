@@ -159,3 +159,93 @@ ShootingGameフォルダの中の**Completeプロジェクト**を開こう。
 2. 「File -> Save Scene」またはcmd(⌘) + S でシーンをアセットとして保存しましょう！
 
 <div style='text-align:center; font-size:50px'>休憩！</div>
+
+
+### [応用編] Waveを作成
+
+#### 特定のタイミングで無敵になるエネミー
+
+1. 複製してアニメーターコントローラーのEnemy(Invincible)を作成
+1. Enemy AnimatorControllerに**「Invincible Layer」**を作成。
+2. *Animations/Enemy*に**Invincible**アニメーションを作成
+3. 下記のようにInvincible LayerのWeightを1、**Dummyステート（デフォルト）**相互にTransitionを作成
+	![](https://dl.dropboxusercontent.com/u/153254465/screenshot2/ss%202014-10-14%2014.01.34.png)
+4. Dummy -> Invincibleは**Exit Timeを3**に
+	![](https://dl.dropboxusercontent.com/u/153254465/screenshot2/ss%202014-10-14%2014.08.05.png)
+5. Invincible -> Dummyは**Exit Timeを2**に
+	![](https://dl.dropboxusercontent.com/u/153254465/screenshot2/ss%202014-10-14%2014.08.10.png)
+
+6. 特定のエネミーだけ無敵にしたい場合
+	
+* スクリプトを書く
+
+```cs
+using UnityEngine;
+using System.Collections;
+
+public class Enemy : MonoBehaviour
+{
+	// 略 //
+	
+	// 無敵になる間隔
+	public float invincibleTimeInterval;
+
+	void DoInvincible ()
+	{
+		spaceship.GetAnimator ().SetTrigger ("Invincible");
+	}
+
+	IEnumerator Start ()
+	{
+		// Spaceshipコンポーネントを取得
+		spaceship = GetComponent<Spaceship> ();
+	
+		// 無敵にするメソッドを実行する
+		// +2は無敵になっている時間。正確にはAnimator.GetNextAnimatorStateInfoでInvincibleアニメーション時間を取得する
+		if (invincibleTimeInterval != 0)
+			InvokeRepeating ("DoInvincible", invincibleTimeInterval, invincibleTimeInterval + 2);
+```
+	
+* Invincibleトリガーを作成する。Dummy -> InvincibleのTransitionで、ConditionsをInvincibleトリガーのみにする
+	* ![](https://dl.dropboxusercontent.com/u/153254465/screenshot2/ss%202014-10-14%2014.41.05.png)
+* 適当なEnemyの「Invincible Time Interval」を0より大きく設定する
+		![](https://dl.dropboxusercontent.com/u/153254465/screenshot2/ss%202014-10-14%2015.13.38.png)
+
+#### 一定時間特定の場所に居続けるエネミー
+
+* Enemyアニメーションコントローラーで作業してもいいがフラグ管理が面倒なので、複製して「Enemy (Standby)」を作成する。
+* Standby Layerを作成
+	![](https://dl.dropboxusercontent.com/u/153254465/screenshot2/ss%202014-10-14%2017.44.08.png)
+
+* Standbyアニメーションを作成
+	* 下に移動 -> 待機 -> 上に移動
+		![](https://dl.dropboxusercontent.com/u/153254465/screenshot2/ss%202014-10-14%2017.46.33.png)
+		
+### [応用] モバイル対応
+
+#### 背景を画面に合わせる
+* *Background/Front*、*Background/Middle*、*Background/Back*のScale.xを9に、DestroyAreaのBoxCollider.Size.xを9に変更します。（iOSの画面に合わせるため）
+
+#### スタート方法変更
+
+* 画面をタップしたらゲームスタートにする
+* **Manager.cs**を変更
+
+```cs
+void Update ()
+{
+	// ゲーム中ではなく、タップして離した状態でゲームを開始する。
+	if (IsPlaying () == false && Input.GetTouch(0).phase == TouchPhase.Ended) {
+		GameStart ();
+	}
+}
+```
+
+* Unity Remoteで確認
+
+
+
+#### インプット対応
+* AssetStoreのSmapleAssetsから「Cross Platform Input」をインポート
+* Prefabから「Mobile Single Stick Control Rig」を選択し、Jumpボタンを削除
+* Player.csを開き、Input.GetAxisRawを**CrossPlatformInput.GetAxisRaw**に変更
